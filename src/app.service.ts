@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { stat } from 'fs';
-import { CreateValidationRuleDto } from './dto/validation-rule.dto';
+import { ValidationRuleDto } from './dto/validation-rule.dto';
 
 
 @Injectable()
@@ -20,7 +20,7 @@ export class AppService {
     };
   }
 
-  validateRule(ruleDto: CreateValidationRuleDto) {
+  validateRule(ruleDto: ValidationRuleDto) {
     // extract field value
     const fieldValue = extractFieldValue(ruleDto, ruleDto.data);
     if (!fieldValue)
@@ -84,7 +84,7 @@ const validate = (fieldValue, condition, conditionValue) => {
   }
 }
 
-const parseResponse = (message: string, status, ruleDto: CreateValidationRuleDto | null, fieldValue?: string) => {
+const parseResponse = (message: string, status, ruleDto: ValidationRuleDto | null, fieldValue?: string) => {
   let data = null;
   if (ruleDto)
     data = {

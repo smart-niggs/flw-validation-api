@@ -28,10 +28,8 @@ class Rule {
 }
 
 
-export class CreateValidationRuleDto {
+export class ValidationRuleDto {
 
-  // @IsNotEmpty({ 'message': 'rule is required.' })
-  // @IsObject({ 'message': 'rule should be an object.' })
   @isValidJson()
   @ValidateNested()
   @Type(() => Rule)

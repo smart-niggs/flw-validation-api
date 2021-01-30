@@ -1,8 +1,7 @@
 import { Body, Controller, Get, Post, Res } from '@nestjs/common';
 import { Response } from 'express';
 import { AppService } from './app.service';
-import { CreateValidationRuleDto } from './dto/validation-rule.dto';
-
+import { ValidationRuleDto } from './dto/validation-rule.dto';
 
 
 interface IResponse {
@@ -22,7 +21,7 @@ export class AppController {
 
 
   @Post('/validate-rule')
-  post(@Body() ruleDto: CreateValidationRuleDto,
+  post(@Body() ruleDto: ValidationRuleDto,
     @Res() res: Response) {
     const result: IResponse = this.appService.validateRule(ruleDto);
 
