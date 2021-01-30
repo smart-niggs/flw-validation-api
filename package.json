@@ -1,8 +1,8 @@
 {
-  "name": "flw-test-api",
+  "name": "flw-validation-api",
   "private": true,
   "version": "1.0.0",
-  "description": "Flutterwave Test: rule-validation API",
+  "description": "Flutterwave Test: Create a simple rule-validation API.",
   "license": "MIT",
   "scripts": {
     "prebuild": "rimraf dist",
