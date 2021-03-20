@@ -1,5 +1,5 @@
 
-Flutterwave Test: Create a simple rule-validation API.
+A simple rule-validation API.
 
 
 ## Description
